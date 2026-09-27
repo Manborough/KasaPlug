@@ -121,7 +121,6 @@ simulated command failures. They lift the function bodies out of `KasaPlug.cpp`
 and compile them natively, so the logic under test is the logic that gets
 flashed. No plug is contacted.
 
-The harness that drives them lives in the project this library was written for,
-at `firmware/tests/run_tests.py` in
-<https://github.com/Manborough/AutoIoT-tempeh>; run `python3
-firmware/tests/run_tests.py` from that repository's root.
+Run them with `python3 tests/run_tests.py`. They need a C++17 compiler and
+ArduinoJson 7, which is found through `arduino-cli` or passed with
+`--arduino-json /path/to/its/include/directory`.
